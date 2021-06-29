@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            function validar() {
+                var nombre = document.forms["form1"]["nombre"].value;
+                var descripcion =  document.forms["form1"]["descripcion"].value;
+                var domicilio =  document.forms["form1"]["domicilio"].value;
+
+                if (nombre.replace(/\s/g, '') === "" || descripcion.replace(/\s/g, '') === "" || domicilio.replace(/\s/g, '') === "") {
+                    alert("Los campos no pueden estar vacios");
+                    return false;
+                } else {
+                    return true
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="form1" action="index.jsp" method = "post" id="form1" onsubmit="return validar();">
+            <table style="width: 1300px">
+                <tr>
+                    <td>
+                        <label>Nombre</label>
+                        <input type="text" name="nombre" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Categoria:</label> 
+                        <select id="categoria" required name="categoria">
+                            <option></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Descripcion:</label> 
+                        <textarea name="descripcion" required></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Domicilio</label>
+                        <input type="text" name="domicilio" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Destacada</label> 
+                        <input type="checkbox" value="Submit" name="destacada"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="ENVIAR"/>
+                    </td>
+                </tr>
+        </form>
+    </table>
+</body>
+</html>
