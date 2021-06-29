@@ -28,7 +28,7 @@
                 isDestacada = false;
             }
 
-            String query = "INSERT INTO form(nombre, categoria, descripcion, domicilio, destacada) VALUES (?, ?, ?, ?, ?)";
+            String query = "INSERT INTO estancia(nombre, categoria, descripcion, domicilio, destacada) VALUES (?, ?, ?, ?, ?)";
 
             String url = "jdbc:mysql://localhost:3306/jsp";
             Connection con = null;
